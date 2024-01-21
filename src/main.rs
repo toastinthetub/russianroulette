@@ -27,12 +27,11 @@ fn main() {
     println!("----  between you and I.    ----");
     println!("--------------------------------");
     println!("-- Only fate can save you now --");
-    let mut prompt7 = String::new();
     io::stdin()
-        .read_line(&mut prompt7)
+        .read_line(&mut [0u8])
         .expect("Didn't get that.");
 
-    for click in 0..unlucky_chamber + 1 {
+    for click in 0..=unlucky_chamber + 1 {
         println!("-----   ROUND NUMBER: {}.   -----\n", click + 1);
 
         if click == 0 {
@@ -48,9 +47,8 @@ fn main() {
             println!("----   *CLICK!*. Both of    ----");
             println!("----    our brains still    ----");
             println!("----  reside in our heads.  ----");
-            let mut prompt8 = String::new();
             io::stdin()
-                .read_line(&mut prompt8)
+                .read_line(&mut [0u8])
                 .expect("Didn't get that.");
         }
 
@@ -73,9 +71,8 @@ fn loadGun(player: i32) {
         println!("----  throw flick it into   ----");
         println!("----       it's place.      ----");
         thread::sleep(Duration::from_secs(1));
-        let mut prompt2 = String::new();
         io::stdin()
-            .read_line(&mut prompt2)
+            .read_line(&mut [0u8])
             .expect("Didn't get that.");
     } else {
         println!("--------------------------------");
@@ -92,9 +89,8 @@ fn loadGun(player: i32) {
         println!("----  grin materializes on  ----");
         println!("---- your emotionless face. ----");
         thread::sleep(Duration::from_secs(1));
-        let mut prompt3 = String::new();
         io::stdin()
-            .read_line(&mut prompt3)
+            .read_line(&mut [0u8])
             .expect("Didn't get that.");
     }
 }
@@ -115,9 +111,8 @@ fn pullTrigger(player: i32) {
         println!("---- that's led up to this. ----");
         println!("----  ...and I squeeze the  ----");
         println!("----        trigger.        ----");
-        let mut prompt4 = String::new();
         io::stdin()
-            .read_line(&mut prompt4)
+            .read_line(&mut [0u8])
             .expect("Didn't get that.");
     } else {
         println!("--------------------------------");
@@ -128,9 +123,8 @@ fn pullTrigger(player: i32) {
         println!("---- gun to your head. Your ----");
         println!("---- hands still, your face ----");
         println!("----        straight...     ----");
-        let mut prompt = String::new();
         io::stdin()
-            .read_line(&mut prompt)
+            .read_line(&mut [0u8])
             .expect("Didn't get that.");
     }
 }
@@ -146,9 +140,8 @@ fn shootplaya(player: i32) {
         println!("---- of what was inside it. ----");
         println!("----    In other words,     ----");
         println!("----        YOU WON!        ----");
-        let mut prompt5 = String::new();
         io::stdin()
-            .read_line(&mut prompt5)
+           .read_line(&mut [0u8])
             .expect("Didn't get that.");
     } else {
         println!("--------------------------------");
@@ -165,9 +158,8 @@ fn shootplaya(player: i32) {
         println!("---- *thud*. That terrible  ----");
         println!("----  grin, still on your   ----");
         println!("----         face.          ----");
-        let mut prompt6 = String::new();
         io::stdin()
-            .read_line(&mut prompt6)
+            .read_line(&mut [0u8])
             .expect("Didn't get that.");
     }
 }
